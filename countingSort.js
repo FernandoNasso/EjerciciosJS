@@ -1,6 +1,3 @@
-// Dada una lista de enteros, se te pide contar y devolver el número de veces que aparece cada valor como un array de enteros.
-
-
 // Consigna del Ejercicio: Counting Sort
 
 // Dada una lista de enteros, se te pide contar y devolver el número de veces que aparece cada valor como un array de enteros.
@@ -32,16 +29,23 @@
 // ordenado=[1, 1, 1, 2, 3].
 // Notas:
 
-// Para este ejercicio, siempre devuelve un array de frecuencia con 100 elementos. El ejemplo anterior muestra solo los primeros 4 elementos, el resto son ceros.
+// Para este ejercicio, siempre devuelve un array de frecuencia con 100 elementos(de 0 a 99). El ejemplo anterior muestra solo los primeros 4 elementos, el resto son ceros.
 
 // Función a Implementar:
 /*
  * Completa la función 'countingSort' a continuación.
  *
- * La función debe devolver un ARRAY DE ENTEROS.
+ * La función debe devolver un ARRAY DE Frecuencia.
  * La función toma un ARRAY DE ENTEROS 'arr' como parámetro.
  */
 
 function countingSort(arr) {
     // Escribe tu código aquí
+    const frecuencia = Array(100).fill(0);
+
+    for (let i = 0; i < arr.length; i++) {
+        frecuencia[arr[i]]++;
+    }
+
+    return frecuencia;
 }
